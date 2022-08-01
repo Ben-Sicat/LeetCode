@@ -24,3 +24,7 @@ def twoSum(self, nums: list[int], target: int) -> list[int]:
     # if it is, return the index of the current number and the index of the number in the list
     hash = {}
     for i in range(len(nums)):
+        diff = target - nums[i]
+        if diff in hash:
+            return [hash[diff], i]#since were looking for the index of the number in the list, we need to return the index of the number in the list
+        hash[nums[i]] = i
