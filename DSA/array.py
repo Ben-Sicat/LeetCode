@@ -13,7 +13,7 @@ def maxSubArray(self,nums: list[int]) -> int:
 
     for i in nums:
         if currSum < 0: # if current sum is negative, reset it to 0
-            currSum += 0
+            currSum = 0
         currSum += i # add current number to current sum
         maxSub = max(maxSub, currSum) #differentiate between what's higher on the max sum and current sum
     return maxSub
