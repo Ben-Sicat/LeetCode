@@ -1,7 +1,7 @@
 import pygame, sys, random
 
 def ball_movement():
-	global ball_speed_x, ball_speed_y
+	global ball_speed_x, ball_speed_y, score_time
 	
 	ball.x += ball_speed_x
 	ball.y += ball_speed_y
@@ -58,6 +58,7 @@ ball_speed_x = 7 * random.choice((1,-1))
 ball_speed_y = 7 * random.choice((1,-1))
 player_speed = 0
 opponent_speed = 7
+score_time = None
 while True:
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
