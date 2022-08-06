@@ -52,4 +52,12 @@ def merge(nums1: list[int], m: int, nums2: list[int], n: int) -> list[int]:
 print(merge([0], 0, [1], 1))
 
 def matrixReshape(self, nums: list[list[int]], r: int, c: int) -> list[list[int]]:
-    return nums
+    if r * c != len(nums) * len(nums[0]):
+        return nums
+    new_nums = []
+    for i in range(r):
+        new_nums.append([])
+        for j in range(c):
+            new_nums[i].append(nums[i*c+j][j])
+    return new_nums
+
