@@ -1,4 +1,7 @@
 #217 Easy
+from re import A
+
+
 def containsDuplicate(sef, nums: list[int]) -> bool:
     hash = set()
     for i in nums:
@@ -54,10 +57,4 @@ print(merge([0], 0, [1], 1))
 def matrixReshape(self, nums: list[list[int]], r: int, c: int) -> list[list[int]]:
     if r * c != len(nums) * len(nums[0]):
         return nums
-    new_nums = []
-    for i in range(r):
-        new_nums.append([])
-        for j in range(c):
-            new_nums[i].append(nums[i*c+j][j])
-    return new_nums
-
+ 
