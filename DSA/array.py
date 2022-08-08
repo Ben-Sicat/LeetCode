@@ -1,4 +1,5 @@
 #217 Easy
+from collections import Counter
 from re import A
 
 
@@ -57,4 +58,13 @@ print(merge([0], 0, [1], 1))
 def matrixReshape(self, nums: list[list[int]], r: int, c: int) -> list[list[int]]:
     if r * c != len(nums) * len(nums[0]):
         return nums
- 
+
+def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+    result = []
+    count = Counter(nums1)
+    for n in nums2:
+        if count[n]>0:
+            result.append(n)
+            count[n]-=1
+    return result
+        
