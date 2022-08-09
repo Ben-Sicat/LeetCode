@@ -67,4 +67,17 @@ def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
             result.append(n)
             count[n]-=1
     return result
+def maxProfit(self, prices: list[int]) -> int:
+    last, recent = 0,1 # init variables
+    maxProfit = 0
+
+    while recent < len(prices):
+        if prices[recent] > prices[last]:
+            profit = prices[recent] - prices[last]
+            maxProfit = max(maxProfit, profit)
+        else:
+            last = recent
+        recent += 1
+    return maxProfit
+
         
