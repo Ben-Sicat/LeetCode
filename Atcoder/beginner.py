@@ -18,3 +18,5 @@ def traingle(self, numRow: int) -> list[list[int]]:
             row.append(temp[j-1] + temp[j])
         res.append(row)
     return res
+def mmp(map: list[list[int]]) -> None:
+    nums = 
