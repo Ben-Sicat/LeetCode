@@ -80,4 +80,4 @@ def maxProfit(self, prices: list[int]) -> int:
         recent += 1
     return maxProfit
 
-        
+def threeSome
